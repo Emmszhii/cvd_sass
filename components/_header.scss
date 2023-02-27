@@ -29,9 +29,8 @@
     height: 100vh;
     text-align: center;
     transition: 0.5s ease;
+    background: $clr-light;
     ul {
-      display: block;
-      text-align: center;
       li {
         padding: 2rem 0;
         border-bottom: 1px solid $clr-dark;
@@ -51,7 +50,6 @@
       transition: 0.5s ease;
     }
   }
-
   .toggle__menu {
     span {
       width: 3.5rem;
@@ -75,6 +73,33 @@
         &:nth-child(3) {
           transform: translate(0, -8px) rotate(-225deg);
           transition: 0.5s ease;
+        }
+      }
+    }
+  }
+  @include mediaQuery($break-lg) {
+    .toggle__menu {
+      display: none;
+    }
+    &__nav {
+      position: unset;
+      width: unset;
+      height: unset;
+      background: none;
+      ul {
+        display: flex;
+        li {
+          margin-left: 2rem;
+          a {
+            color: $clr-light;
+            &:hover {
+              color: $clr-primary;
+            }
+          }
+          &:hover {
+            background: unset;
+            color: $clr-primary;
+          }
         }
       }
     }

@@ -1,0 +1,127 @@
+.banner {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+  padding-top: 12rem;
+  &__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    // justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    img {
+      width: 50%;
+    }
+  }
+  &__text {
+    h1 {
+      padding-top: 2rem;
+      text-align: center;
+      color: $clr-primary;
+      font-size: 3.5rem;
+      font-weight: 600;
+    }
+    a {
+      color: $clr-light;
+      padding: 1.5rem 2rem;
+      background: $clr-primary;
+      border-radius: 3rem;
+      text-transform: uppercase;
+      display: inline-block;
+      border: 1px solid transparent;
+      &:hover {
+        color: $clr-dark;
+        background: $clr-light;
+        border: 1px solid $clr-dark;
+      }
+    }
+    p {
+      text-align: justify;
+      padding: 3rem 0;
+    }
+  }
+  @include mediaQuery($break-lg) {
+    padding-top: 15rem;
+    max-width: unset;
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      text-align: unset;
+    }
+    &__text {
+      max-width: 37rem;
+      h1 {
+        text-align: left;
+        font-size: 10rem;
+        font-weight: 600;
+        line-height: 0.8;
+      }
+      p {
+        padding: 5rem 0;
+      }
+    }
+  }
+}
+
+.hm-services {
+  padding: 7rem 0;
+  background: $clr-dark;
+  color: $clr-light;
+  &__wrapper {
+    max-width: 40rem;
+    margin: 0 auto;
+  }
+  &__item {
+    // margin: 8rem 0;
+    text-align: center;
+    i {
+      color: $clr-primary;
+      font-size: 5rem;
+    }
+    h4 {
+      padding-top: 2rem;
+      color: $clr-primary;
+      font-size: 2.5rem;
+    }
+    p {
+      text-align: justify;
+      padding: 3rem 0;
+    }
+    a {
+      color: $clr-light;
+      padding: 1.5rem 2rem;
+      background: $clr-primary;
+      border-radius: 3rem;
+      text-transform: uppercase;
+      display: inline-block;
+      border: 1px solid transparent;
+      &:hover {
+        color: $clr-primary;
+        background: $clr-dark;
+        border: 1px solid $clr-primary;
+      }
+    }
+  }
+  &__item:nth-child(2) {
+    margin: 8rem 0;
+  }
+  @include mediaQuery($break-lg) {
+    &__wrapper {
+      @include grid(3, 10rem);
+      max-width: unset;
+    }
+    &__item {
+      // margin: 4rem 0;
+      // max-width: 40rem;
+      i {
+        font-size: 5rem;
+      }
+      h4 {
+        font-size: 3rem;
+      }
+    }
+    &__item:nth-child(2) {
+      margin: unset;
+    }
+  }
+}
