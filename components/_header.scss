@@ -38,10 +38,12 @@
           color: $clr-dark;
           text-decoration: none;
           font-size: 2rem;
-          color: $clr-dark;
         }
         &:hover {
           background: hsl(0, 0%, 50%);
+        }
+        &:hover a {
+          color: $clr-primary;
         }
       }
     }
